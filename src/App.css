@@ -2,11 +2,11 @@
     position:absolute;
     display: flex;
     height: 75vh;
-    width: 40vw;
+    max-height: 700px;
+    max-width: 620px;
     flex-direction: column;
     background-color: red;
     border: 5px solid black;
-    /* border-radius: 10px; */
     top: 12.5vh;
     left: 30vw;
 }
