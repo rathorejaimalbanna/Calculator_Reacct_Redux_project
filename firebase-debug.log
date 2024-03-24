@@ -1,0 +1,139 @@
+[debug] [2024-03-24T13:52:14.894Z] ----------------------------------------------------------------------
+[debug] [2024-03-24T13:52:14.895Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\merti\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-03-24T13:52:14.896Z] CLI Version:   13.5.2
+[debug] [2024-03-24T13:52:14.896Z] Platform:      win32
+[debug] [2024-03-24T13:52:14.896Z] Node Version:  v18.18.0
+[debug] [2024-03-24T13:52:14.897Z] Time:          Sun Mar 24 2024 19:22:14 GMT+0530 (India Standard Time)
+[debug] [2024-03-24T13:52:14.897Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-24T13:52:14.955Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-24T13:52:14.956Z] > authorizing via signed-in user (rathorejaimalbanna@gmail.com)
+[debug] [2024-03-24T13:52:14.956Z] [iam] checking project calculator-14f07 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-03-24T13:52:14.958Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/calculator-14f07:testIamPermissions [none]
+[debug] [2024-03-24T13:52:14.958Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/calculator-14f07:testIamPermissions x-goog-quota-user=projects/calculator-14f07
+[debug] [2024-03-24T13:52:14.958Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/calculator-14f07:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-24T13:52:17.022Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/calculator-14f07:testIamPermissions 200
+[debug] [2024-03-24T13:52:17.023Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/calculator-14f07:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-24T13:52:17.024Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/calculator-14f07 [none]
+[debug] [2024-03-24T13:52:19.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/calculator-14f07 200
+[debug] [2024-03-24T13:52:19.471Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/calculator-14f07 {"projectId":"calculator-14f07","projectNumber":"813404375020","displayName":"calculator","name":"projects/calculator-14f07","resources":{"hostingSite":"calculator-14f07"},"state":"ACTIVE","etag":"1_4c7c34f3-8b88-42c2-b989-4b2cbdf85564"}
+[info] 
+[info] === Deploying to 'calculator-14f07'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-03-24T13:52:19.476Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions [none]
+[debug] [2024-03-24T13:52:19.476Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-03-24T13:52:21.955Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions 200
+[debug] [2024-03-24T13:52:21.955Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions {"name":"projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[calculator-14f07]: beginning deploy... 
+[info] i  hosting[calculator-14f07]: found 13 files in build 
+[debug] [2024-03-24T13:52:21.968Z] [hosting] uploading with 200 concurrency
+[debug] [2024-03-24T13:52:21.969Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2024-03-24T13:52:22.063Z] [hosting] hash cache [YnVpbGQ] stored for 13 files
+[debug] [2024-03-24T13:52:22.063Z] [hosting][hash queue][FINAL] {"max":86,"min":7,"avg":14.307692307692308,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":93}
+[debug] [2024-03-24T13:52:22.064Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0:populateFiles [none]
+[debug] [2024-03-24T13:52:22.064Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0:populateFiles {"files":{"/asset-manifest.json":"e31228a6b66b24993a7ec74b322d639d6ea0f209ac629cb08874f096cb900139","/index.html":"c3c64ac5d5bb6bd00d70e0a0063406114e7558585be2319b1ad84d02f78b82bc","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/arrow.png":"910fe0e9744a59ae77ebd7d45ce38de19f86a150397d1e9f933c7f0fccafacb2","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/static/css/main.60375f16.css":"602376bdabbf0ff08cc0f7793e011fce967c31570786d16856df57ea2d1574fe","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/static/css/main.60375f16.css.map":"67702690aa07f4fdc49b21601e1f8a7aeac4150b37906a56cdcda7ad10438c26","/static/js/main.84d836f7.js.LICENSE.txt":"4eaad57ea3bb1d12ea61532d1b8d0422d249a15703939431ded65e78902cab22","/static/js/main.84d836f7.js":"a5ae9d7c717c65c717092e81ddab55d0fb6bedbfd48eae951b76e9e361933849","/static/js/main.84d836f7.js.map":"c7ff3cff1216595819af0ba424e7da809ab2366f531d305b44147bd782394654"}}
+[debug] [2024-03-24T13:52:25.204Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0:populateFiles 200
+[debug] [2024-03-24T13:52:25.205Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0:populateFiles {"uploadRequiredHashes":["c3c64ac5d5bb6bd00d70e0a0063406114e7558585be2319b1ad84d02f78b82bc","3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","c7ff3cff1216595819af0ba424e7da809ab2366f531d305b44147bd782394654","602376bdabbf0ff08cc0f7793e011fce967c31570786d16856df57ea2d1574fe","ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","910fe0e9744a59ae77ebd7d45ce38de19f86a150397d1e9f933c7f0fccafacb2","e31228a6b66b24993a7ec74b322d639d6ea0f209ac629cb08874f096cb900139","4eaad57ea3bb1d12ea61532d1b8d0422d249a15703939431ded65e78902cab22","67702690aa07f4fdc49b21601e1f8a7aeac4150b37906a56cdcda7ad10438c26","a5ae9d7c717c65c717092e81ddab55d0fb6bedbfd48eae951b76e9e361933849","eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files"}
+[debug] [2024-03-24T13:52:25.207Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c3c64ac5d5bb6bd00d70e0a0063406114e7558585be2319b1ad84d02f78b82bc [none]
+[debug] [2024-03-24T13:52:25.207Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c3c64ac5d5bb6bd00d70e0a0063406114e7558585be2319b1ad84d02f78b82bc [stream]
+[debug] [2024-03-24T13:52:25.208Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b [none]
+[debug] [2024-03-24T13:52:25.208Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b [stream]
+[debug] [2024-03-24T13:52:25.209Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [none]
+[debug] [2024-03-24T13:52:25.209Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [stream]
+[debug] [2024-03-24T13:52:25.209Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c7ff3cff1216595819af0ba424e7da809ab2366f531d305b44147bd782394654 [none]
+[debug] [2024-03-24T13:52:25.209Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c7ff3cff1216595819af0ba424e7da809ab2366f531d305b44147bd782394654 [stream]
+[debug] [2024-03-24T13:52:25.210Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/602376bdabbf0ff08cc0f7793e011fce967c31570786d16856df57ea2d1574fe [none]
+[debug] [2024-03-24T13:52:25.210Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/602376bdabbf0ff08cc0f7793e011fce967c31570786d16856df57ea2d1574fe [stream]
+[debug] [2024-03-24T13:52:25.211Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 [none]
+[debug] [2024-03-24T13:52:25.211Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 [stream]
+[debug] [2024-03-24T13:52:25.212Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a [none]
+[debug] [2024-03-24T13:52:25.212Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a [stream]
+[debug] [2024-03-24T13:52:25.213Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/910fe0e9744a59ae77ebd7d45ce38de19f86a150397d1e9f933c7f0fccafacb2 [none]
+[debug] [2024-03-24T13:52:25.213Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/910fe0e9744a59ae77ebd7d45ce38de19f86a150397d1e9f933c7f0fccafacb2 [stream]
+[debug] [2024-03-24T13:52:25.213Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/e31228a6b66b24993a7ec74b322d639d6ea0f209ac629cb08874f096cb900139 [none]
+[debug] [2024-03-24T13:52:25.213Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/e31228a6b66b24993a7ec74b322d639d6ea0f209ac629cb08874f096cb900139 [stream]
+[debug] [2024-03-24T13:52:25.214Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/4eaad57ea3bb1d12ea61532d1b8d0422d249a15703939431ded65e78902cab22 [none]
+[debug] [2024-03-24T13:52:25.214Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/4eaad57ea3bb1d12ea61532d1b8d0422d249a15703939431ded65e78902cab22 [stream]
+[debug] [2024-03-24T13:52:25.215Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/67702690aa07f4fdc49b21601e1f8a7aeac4150b37906a56cdcda7ad10438c26 [none]
+[debug] [2024-03-24T13:52:25.215Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/67702690aa07f4fdc49b21601e1f8a7aeac4150b37906a56cdcda7ad10438c26 [stream]
+[debug] [2024-03-24T13:52:25.216Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/a5ae9d7c717c65c717092e81ddab55d0fb6bedbfd48eae951b76e9e361933849 [none]
+[debug] [2024-03-24T13:52:25.216Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/a5ae9d7c717c65c717092e81ddab55d0fb6bedbfd48eae951b76e9e361933849 [stream]
+[debug] [2024-03-24T13:52:25.216Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 [none]
+[debug] [2024-03-24T13:52:25.217Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 [stream]
+[debug] [2024-03-24T13:52:25.218Z] [hosting][populate queue][FINAL] {"max":3144,"min":3144,"avg":3144,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":3156}
+[debug] [2024-03-24T13:52:25.218Z] [hosting] uploads queued: 13
+[debug] [2024-03-24T13:52:26.600Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 200
+[debug] [2024-03-24T13:52:26.600Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 [stream]
+[debug] [2024-03-24T13:52:26.608Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b 200
+[debug] [2024-03-24T13:52:26.608Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b [stream]
+[debug] [2024-03-24T13:52:26.629Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/4eaad57ea3bb1d12ea61532d1b8d0422d249a15703939431ded65e78902cab22 200
+[debug] [2024-03-24T13:52:26.629Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/4eaad57ea3bb1d12ea61532d1b8d0422d249a15703939431ded65e78902cab22 [stream]
+[debug] [2024-03-24T13:52:26.715Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 200
+[debug] [2024-03-24T13:52:26.716Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [stream]
+[debug] [2024-03-24T13:52:26.766Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/910fe0e9744a59ae77ebd7d45ce38de19f86a150397d1e9f933c7f0fccafacb2 200
+[debug] [2024-03-24T13:52:26.766Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/910fe0e9744a59ae77ebd7d45ce38de19f86a150397d1e9f933c7f0fccafacb2 [stream]
+[debug] [2024-03-24T13:52:26.782Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/67702690aa07f4fdc49b21601e1f8a7aeac4150b37906a56cdcda7ad10438c26 200
+[debug] [2024-03-24T13:52:26.782Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/67702690aa07f4fdc49b21601e1f8a7aeac4150b37906a56cdcda7ad10438c26 [stream]
+[debug] [2024-03-24T13:52:26.863Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/e31228a6b66b24993a7ec74b322d639d6ea0f209ac629cb08874f096cb900139 200
+[debug] [2024-03-24T13:52:26.863Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/e31228a6b66b24993a7ec74b322d639d6ea0f209ac629cb08874f096cb900139 [stream]
+[debug] [2024-03-24T13:52:27.101Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a 200
+[debug] [2024-03-24T13:52:27.101Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a [stream]
+[debug] [2024-03-24T13:52:27.232Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 200
+[debug] [2024-03-24T13:52:27.232Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 [stream]
+[debug] [2024-03-24T13:52:27.432Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c7ff3cff1216595819af0ba424e7da809ab2366f531d305b44147bd782394654 200
+[debug] [2024-03-24T13:52:27.432Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c7ff3cff1216595819af0ba424e7da809ab2366f531d305b44147bd782394654 [stream]
+[debug] [2024-03-24T13:52:27.564Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/a5ae9d7c717c65c717092e81ddab55d0fb6bedbfd48eae951b76e9e361933849 200
+[debug] [2024-03-24T13:52:27.564Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/a5ae9d7c717c65c717092e81ddab55d0fb6bedbfd48eae951b76e9e361933849 [stream]
+[debug] [2024-03-24T13:52:27.835Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c3c64ac5d5bb6bd00d70e0a0063406114e7558585be2319b1ad84d02f78b82bc 200
+[debug] [2024-03-24T13:52:27.835Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/c3c64ac5d5bb6bd00d70e0a0063406114e7558585be2319b1ad84d02f78b82bc [stream]
+[debug] [2024-03-24T13:52:27.994Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/602376bdabbf0ff08cc0f7793e011fce967c31570786d16856df57ea2d1574fe 200
+[debug] [2024-03-24T13:52:27.994Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0/files/602376bdabbf0ff08cc0f7793e011fce967c31570786d16856df57ea2d1574fe [stream]
+[debug] [2024-03-24T13:52:27.994Z] [hosting][upload queue][FINAL] {"max":2788,"min":1394,"avg":1880.6153846153845,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":2789}
+[info] +  hosting[calculator-14f07]: file upload complete 
+[debug] [2024-03-24T13:52:27.996Z] [hosting] deploy completed after 6038ms
+[debug] [2024-03-24T13:52:27.996Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "calculator-14f07"
+    },
+    "version": "projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0"
+  }
+]
+[info] i  hosting[calculator-14f07]: finalizing version... 
+[debug] [2024-03-24T13:52:27.999Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0 updateMask=status%2Cconfig
+[debug] [2024-03-24T13:52:27.999Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-03-24T13:52:29.373Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0 200
+[debug] [2024-03-24T13:52:29.373Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0 {"name":"projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-03-24T13:52:27.244935Z","createUser":{"email":"rathorejaimalbanna@gmail.com"},"finalizeTime":"2024-03-24T13:52:35.630725Z","finalizeUser":{"email":"rathorejaimalbanna@gmail.com"}}
+[debug] [2024-03-24T13:52:29.373Z] [hosting] finalized version for calculator-14f07:[object Object]
+[info] +  hosting[calculator-14f07]: version finalized 
+[info] i  hosting[calculator-14f07]: releasing new version... 
+[debug] [2024-03-24T13:52:29.374Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/channels/live/releases versionName=projects%2F813404375020%2Fsites%2Fcalculator-14f07%2Fversions%2Fca4b2bd8c1b2f2e0
+[debug] [2024-03-24T13:52:29.374Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/channels/live/releases {}
+[debug] [2024-03-24T13:52:30.765Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/channels/live/releases 200
+[debug] [2024-03-24T13:52:30.765Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/calculator-14f07/channels/live/releases {"name":"projects/813404375020/sites/calculator-14f07/channels/live/releases/1711288356429000","version":{"name":"projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-03-24T13:52:27.244935Z","createUser":{"email":"rathorejaimalbanna@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKARXFOVFuQhr_gHgQ3t0zZ17baLUhY1RTWML2WvpT8ag"},"finalizeTime":"2024-03-24T13:52:35.630725Z","finalizeUser":{"email":"rathorejaimalbanna@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKARXFOVFuQhr_gHgQ3t0zZ17baLUhY1RTWML2WvpT8ag"}},"type":"DEPLOY","releaseTime":"2024-03-24T13:52:36.429Z","releaseUser":{"email":"rathorejaimalbanna@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKARXFOVFuQhr_gHgQ3t0zZ17baLUhY1RTWML2WvpT8ag"}}
+[debug] [2024-03-24T13:52:30.766Z] [hosting] release: {"name":"projects/813404375020/sites/calculator-14f07/channels/live/releases/1711288356429000","version":{"name":"projects/813404375020/sites/calculator-14f07/versions/ca4b2bd8c1b2f2e0","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-03-24T13:52:27.244935Z","createUser":{"email":"rathorejaimalbanna@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKARXFOVFuQhr_gHgQ3t0zZ17baLUhY1RTWML2WvpT8ag"},"finalizeTime":"2024-03-24T13:52:35.630725Z","finalizeUser":{"email":"rathorejaimalbanna@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKARXFOVFuQhr_gHgQ3t0zZ17baLUhY1RTWML2WvpT8ag"}},"type":"DEPLOY","releaseTime":"2024-03-24T13:52:36.429Z","releaseUser":{"email":"rathorejaimalbanna@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKARXFOVFuQhr_gHgQ3t0zZ17baLUhY1RTWML2WvpT8ag"}}
+[info] +  hosting[calculator-14f07]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/calculator-14f07/overview
+[info] Hosting URL: https://calculator-14f07.web.app
+[debug] [2024-03-24T13:52:37.351Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\merti\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:258:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
